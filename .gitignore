@@ -50,3 +50,6 @@ next-env.d.ts
 
 backend/.env
 backend/.venv/
+
+# Database backups
+*.dump

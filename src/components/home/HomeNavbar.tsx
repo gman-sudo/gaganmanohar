@@ -18,7 +18,13 @@ export default function HomeNavbar() {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const sectionIds = ["work", "about", "experience", "skills", "contact"];
+    const sectionIds = [
+      "work",
+      "about",
+      "experience",
+      "skills",
+      "contact",
+    ];
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 24);
@@ -99,6 +105,17 @@ export default function HomeNavbar() {
           {/* ACTIONS */}
 
           <div className="flex items-center gap-2">
+            {/* ADMIN */}
+
+            <Link
+              href="/admin"
+              className="hidden rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-medium text-white/60 transition duration-300 hover:border-white/20 hover:bg-white/[0.08] hover:text-white sm:inline-flex"
+            >
+              ADMIN
+            </Link>
+
+            {/* LET'S TALK */}
+
             <a
               href="#contact"
               style={{ color: "#000000" }}
@@ -170,6 +187,18 @@ export default function HomeNavbar() {
                 </span>
               </a>
             ))}
+
+            {/* MOBILE ADMIN */}
+
+            <Link
+              href="/admin"
+              onClick={() => setMobileMenuOpen(false)}
+              className="mt-2 flex w-full items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-sm font-medium text-white/70 transition duration-300 hover:border-white/20 hover:bg-white/[0.08] hover:text-white"
+            >
+              ADMIN
+            </Link>
+
+            {/* MOBILE LET'S TALK */}
 
             <a
               href="#contact"
