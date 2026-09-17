@@ -10,6 +10,14 @@
 !.yarn/releases
 !.yarn/versions
 
+node_modules/
+.next/
+out/
+
+
+__pycache__/
+*.py[cod]
+
 # testing
 /coverage
 
@@ -39,3 +47,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+backend/.env
+backend/.venv/
